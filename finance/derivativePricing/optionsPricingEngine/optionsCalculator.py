@@ -136,6 +136,7 @@ class OptionCalculator:
         """
         res = self.model.greeks()
         self.modelResults.update(res)
+        self.modelParams.update(res)
         return res
 
     def calculate_price_and_greeks(self) -> Dict[str, Union[float, Dict[str, float]]]:
